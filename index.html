@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
+  <title>Desi Protein · Premium Sattu Shake </title>
+  <meta name="description" content="Desi Protein offers premium Sattu shakes & powders. 100% natural, high-protein traditional Indian nutrition for modern lifestyles. Export & private label available." />
+  <link rel="canonical" href="https://desiprotein.com/" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#CE771E" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta property="og:title" content="Desi Protein · Premium Sattu Shake " />
+  <meta property="og:description" content="Traditional Indian nutrition reimagined. 100% natural Sattu shakes, powders & private label export." />
+  <meta property="og:image" content="https://desiprotein.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://desiprotein.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      background: #F5F1E8;
+      color: #2B2B2B;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 100px 0; }
+    .section-title {
+      font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em;
+      line-height: 1.1; color: #2B2B2B;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .btn-premium {
+      display: inline-block; padding: 14px 36px;
+      background: #CE771E; color: #fff; font-weight: 600;
+      border-radius: 60px; border: none;
+      transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+      box-shadow: 0 12px 30px rgba(206,119,30,0.25);
+      cursor: pointer; font-size: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-premium::after {
+      content: ''; position: absolute; top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.4s;
+      transform: scale(0.5);
+    }
+    .btn-premium:hover::after { opacity: 1; transform: scale(1); }
+    .btn-premium:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(206,119,30,0.35);
+      background: #b8681a;
+    }
+    .btn-outline {
+      background: transparent; color: #2B2B2B;
+      box-shadow: inset 0 0 0 2px #2B2B2B;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(2px);
+    }
+    .btn-outline:hover { background: #2B2B2B; color: #fff; box-shadow: inset 0 0 0 2px #2B2B2B; }
+
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between; align-items: center;
+      z-index: 999;
+      transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+      background: transparent;
+    }
+    .navbar.scrolled {
+      background: rgba(245,241,232,0.85);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+      padding: 12px 24px;
+    }
+    .navbar .logo img { height: 55px; width: auto; transition: transform 0.3s; cursor: pointer; }
+    .navbar .logo img:hover { transform: scale(1.05); }
+    .nav-links {
+      display: flex; gap: 28px; align-items: center;
+      list-style: none; font-weight: 600; font-size: 0.95rem;
+    }
+    .nav-links a { position: relative; color: #2B2B2B; transition: 0.3s; }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -6px; left: 0;
+      width: 0%; height: 2.5px; background: #CE771E;
+      transition: width 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: #CE771E; }
+    .nav-cta {
+      background: #CE771E; color: #fff !important;
+      padding: 8px 22px; border-radius: 40px;
+      box-shadow: 0 4px 15px rgba(206,119,30,0.2);
+    }
+    .nav-cta:hover { background: #b8681a; color: #fff !important; transform: translateY(-2px); }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; z-index: 1000;
+    }
+    .hamburger span {
+      width: 28px; height: 3px; background: #2B2B2B;
+      border-radius: 4px; transition: 0.3s;
+    }
+    .sidebar {
+      position: fixed; top: 0; right: -320px;
+      width: 300px; height: 100vh;
+      background: rgba(245,241,232,0.97);
+      backdrop-filter: blur(20px);
+      box-shadow: -8px 0 40px rgba(0,0,0,0.05);
+      padding: 100px 32px 40px;
+      transition: right 0.4s cubic-bezier(0.23,1,0.32,1);
+      z-index: 998;
+      display: flex; flex-direction: column; gap: 28px;
+    }
+    .sidebar.open { right: 0; }
+    .sidebar a {
+      font-size: 1.2rem; font-weight: 600; color: #2B2B2B;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 12px 0;
+      transition: 0.3s;
+    }
+    .sidebar a:hover { color: #CE771E; padding-left: 12px; }
+    .sidebar .nav-cta-mobile {
+      background: #CE771E; color: #fff; text-align: center;
+      border-radius: 60px; padding: 14px; margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .sidebar { right: -320px; }
+      .section-title { font-size: 2.2rem; }
+      .navbar .logo img { height: 45px; }
+      .navbar { background: transparent; }
+      .navbar.scrolled { background: rgba(245,241,232,0.85); backdrop-filter: blur(20px); }
+    }
+
+    /* HERO – mobile image top */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 140px 0 60px; background: #F5F1E8;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(206,119,30,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 50px; align-items: center;
+    }
+    .hero-content h1 {
+      font-size: 4.5rem; font-weight: 900;
+      line-height: 1.2; letter-spacing: -0.03em;
+    }
+    .hero-content h1 .line1 { display: block; letter-spacing: 4px; }
+    .hero-content h1 .line2 { 
+      display: block; 
+      color: #CE771E;
+      background: linear-gradient(135deg, #CE771E, #a85f16);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    .hero-content p {
+      font-size: 1.2rem; opacity: 0.7;
+      margin: 20px 0 32px; max-width: 440px;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-mockup {
+      width: 100%; max-width: 650px; aspect-ratio: 1/1;
+      border-radius: 0;
+      box-shadow: none;
+      transform: none;
+      background-image: url('images/hero.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.6s cubic-bezier(0.23,1,0.32,1);
+      filter: drop-shadow(0 30px 60px rgba(206,119,30,0.1));
+    }
+    .hero-mockup:hover { transform: scale(1.02) rotate(1deg); }
+    
+    @media (max-width: 768px) {
+      .hero-grid { 
+        grid-template-columns: 1fr; 
+        text-align: center;
+        gap: 20px;
+      }
+      .hero-grid .hero-visual { order: 0; }
+      .hero-grid .hero-content { order: 1; }
+      .hero-grid .hero-buttons { order: 2; }
+      .hero-content p { margin: 16px auto; max-width: 100%; }
+      .hero-buttons { 
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .hero-buttons .btn-premium { 
+        font-size: 0.85rem; 
+        padding: 10px 20px;
+        white-space: nowrap;
+      }
+      .hero-content h1 { font-size: 3rem; }
+      .hero-mockup { 
+        max-width: 100%; 
+        height: 400px;
+        width: 100%;
+        aspect-ratio: 1/1;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-mockup { height: 340px; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .hero-buttons .btn-premium { font-size: 0.75rem; padding: 8px 16px; }
+    }
+
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 24px; text-align: center;
+      background: #fff; padding: 40px 24px;
+      border-radius: 60px; box-shadow: 0 20px 60px rgba(0,0,0,0.02);
+      border: 1px solid rgba(206,119,30,0.05);
+    }
+    .trust-item h3 { font-size: 2.8rem; font-weight: 800; color: #CE771E; }
+    .trust-item p { font-weight: 600; opacity: 0.6; margin-top: 4px; }
+    @media (max-width: 600px) {
+      .trust-grid { grid-template-columns: repeat(2,1fr); }
+    }
+
+    /* ABOUT – swapped: image right, text left */
+    .about-layout {
+      display: grid; grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px; align-items: center;
+    }
+    .about-image {
+      border-radius: 0;
+      height: 600px;
+      background-image: url('images/about.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      transition: transform 0.6s cubic-bezier(0.23,1,0.32,1);
+    }
+    .about-image:hover { transform: scale(1.02) rotate(-1deg); }
+    @media (max-width: 768px) { 
+      .about-layout { grid-template-columns: 1fr; }
+      .about-image { height: 350px; }
+    }
+
+    .product-section-wrapper {
+      position: relative;
+      padding: 0 60px;
+    }
+    .product-scroll-wrapper {
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 16px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .product-scroll-wrapper::-webkit-scrollbar { display: none; }
+    .product-scroll-wrapper:active { cursor: grabbing; }
+    
+    .product-card {
+      flex: 0 0 340px;
+      scroll-snap-align: start;
+      border-radius: 40px;
+      padding: 0;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+      transition: all 0.6s cubic-bezier(0.23,1,0.32,1);
+      border: 1px solid rgba(255,255,255,0.3);
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+    }
+    .product-card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 0.6s;
+    }
+    .product-card:hover::before { opacity: 0.6; }
+    .product-card:hover { 
+      transform: translateY(-15px) scale(1.03); 
+      box-shadow: 0 50px 100px rgba(206,119,30,0.15);
+      border-color: rgba(206,119,30,0.2);
+    }
+    .product-card h4 {
+      font-size: 1.6rem; font-weight: 800;
+      padding: 12px 24px;
+      border-radius: 0 20px 0 0;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+      margin: 0;
+      letter-spacing: 0.5px;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      backdrop-filter: none;
+    }
+    .product-card .card-image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.8s cubic-bezier(0.23,1,0.32,1);
+    }
+    .product-card:hover .card-image { transform: scale(1.1); }
+
+    @media (min-width: 769px) {
+      .product-card { flex: 0 0 380px; min-height: 480px; }
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(206,119,30,0.9);
+      color: #fff;
+      border: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 30px rgba(206,119,30,0.3);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .scroll-btn:hover {
+      background: #a85f16;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 12px 40px rgba(206,119,30,0.4);
+    }
+    .scroll-btn-left { left: -30px; }
+    .scroll-btn-right { right: -30px; }
+
+    @media (min-width: 769px) {
+      .scroll-btn { display: flex; }
+      .product-scroll-wrapper { 
+        overflow-x: hidden;
+        flex-wrap: nowrap;
+        gap: 16px;
+        scroll-behavior: smooth;
+        padding: 20px 0 40px;
+      }
+      .hero { padding-top: 100px; }
+      #about.section { padding-top: 40px; }
+      #products.section { padding-top: 40px; }
+      #benefits.section { padding-top: 40px; }
+      #export.section { padding-top: 40px; }
+      #testimonials.section,
+      #contact.section,
+      #inquiry.section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+    @media (max-width: 768px) {
+      .product-card { flex: 0 0 280px; min-height: 400px; }
+      .scroll-btn { display: none !important; }
+      .product-scroll-wrapper { overflow-x: auto; flex-wrap: nowrap; gap: 16px; }
+      .product-section-wrapper { padding: 0; }
+      .hero { padding-top: 140px; }
+      #about.section { 
+        padding-top: 40px; 
+        padding-bottom: 40px;
+      }
+      #products.section { 
+        padding-top: 40px; 
+        padding-bottom: 40px;
+      }
+      #benefits.section { 
+        padding-top: 40px; 
+        padding-bottom: 40px;
+      }
+      #export.section { 
+        padding-top: 40px; 
+        padding-bottom: 40px;
+      }
+      #testimonials.section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      #contact.section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      #inquiry.section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    /* ========== REDESIGNED WHY SATTU? SECTION ========== */
+    #benefits {
+      position: relative;
+      padding: 100px 0 80px;
+      background-image: url('images/whysattu.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      border-radius: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    #benefits .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Heading - Left aligned */
+    .benefits-header {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    .benefits-header .section-title {
+      color: #000;
+      text-shadow: none;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    .benefits-header .benefits-subtitle {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: rgba(0,0,0,0.65);
+      max-width: 600px;
+      letter-spacing: 0.2px;
+      line-height: 1.5;
+    }
+
+    /* Premium Card - Reduced height */
+    .benefits-premium-card {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      border-radius: 40px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.12), 0 10px 30px rgba(0,0,0,0.04);
+      border: 1px solid rgba(255,255,255,0.45);
+      padding: 40px 48px;
+      min-height: 360px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .benefits-premium-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(206,119,30,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .benefits-premium-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 50px 100px rgba(0,0,0,0.15), 0 15px 40px rgba(206,119,30,0.08);
+      border-color: rgba(206,119,30,0.15);
+    }
+
+    /* Left Column */
+    .benefits-left {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+    }
+    .benefits-left .benefit-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #CE771E;
+      background: rgba(206,119,30,0.12);
+      padding: 3px 14px;
+      border-radius: 40px;
+      width: fit-content;
+    }
+    .benefits-left h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #1a1a1a;
+      margin: 2px 0 0;
+    }
+    .benefits-left .benefit-desc {
+      font-size: 0.9rem;
+      color: rgba(0,0,0,0.65);
+      line-height: 1.5;
+      margin-bottom: 2px;
+      max-width: 90%;
+    }
+
+    /* Benefit points - 2 column grid to reduce height */
+    .benefit-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+      margin-top: 4px;
+    }
+    .benefit-point {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      transition: all 0.3s ease;
+      padding: 4px 6px 4px 0;
+      border-radius: 10px;
+    }
+    .benefit-point:hover {
+      transform: translateX(4px);
+      background: rgba(206,119,30,0.04);
+    }
+    .benefit-point .point-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      border-radius: 50%;
+      background: rgba(206,119,30,0.1);
+      color: #CE771E;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+    .benefit-point:hover .point-icon {
+      background: #CE771E;
+      color: #fff;
+      transform: scale(1.08) rotate(-6deg);
+      box-shadow: 0 6px 16px rgba(206,119,30,0.2);
+    }
+
+    /* Right Column - Image */
+    .benefits-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      min-height: 240px;
+    }
+    .benefits-right .product-image-wrapper {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 1/1;
+      background-image: url('images/benefit-hero.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: drop-shadow(0 20px 40px rgba(206,119,30,0.15));
+      transition: all 0.6s cubic-bezier(0.23,1,0.32,1);
+      animation: floatImage 5s ease-in-out infinite;
+    }
+    .benefits-right .product-image-wrapper:hover {
+      transform: scale(1.04) rotate(2deg);
+      filter: drop-shadow(0 30px 60px rgba(206,119,30,0.25));
+    }
+    @keyframes floatImage {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Navigation */
+    .benefits-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .benefits-nav button {
+      background: rgba(206,119,30,0.9);
+      color: #fff;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(206,119,30,0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      backdrop-filter: blur(4px);
+    }
+    .benefits-nav button:hover {
+      background: #a85f16;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(206,119,30,0.3);
+    }
+    .benefits-nav button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .benefits-dots {
+      display: flex;
+      gap: 12px;
+    }
+    .benefits-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .benefits-dots span.active {
+      background: #CE771E;
+      transform: scale(1.25);
+      box-shadow: 0 0 20px rgba(206,119,30,0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .benefits-premium-card {
+        grid-template-columns: 1fr;
+        padding: 32px 28px;
+        gap: 20px;
+        min-height: auto;
+        width: 95%;
+      }
+      .benefits-left .benefit-desc { max-width: 100%; }
+      .benefits-right { min-height: 200px; }
+      .benefits-right .product-image-wrapper { max-width: 260px; }
+      .benefit-points {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 12px;
+      }
+    }
+    @media (max-width: 768px) {
+      #benefits { padding: 40px 0 30px; background-attachment: scroll; min-height: auto; }
+      .benefits-premium-card { 
+        padding: 24px 18px; 
+        border-radius: 32px; 
+        width: 100%;
+        min-height: auto;
+      }
+      .benefits-left h3 { font-size: 1.4rem; }
+      .benefits-left .benefit-desc { font-size: 0.85rem; }
+      .benefit-points {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 10px;
+      }
+      .benefit-point { 
+        font-size: 0.75rem; 
+        gap: 8px;
+        padding: 3px 4px 3px 0;
+      }
+      .benefit-point .point-icon { 
+        width: 24px; 
+        height: 24px; 
+        min-width: 24px; 
+        font-size: 0.7rem;
+      }
+      .benefits-right { min-height: 160px; }
+      .benefits-right .product-image-wrapper { max-width: 180px; }
+      .benefits-nav { gap: 14px; margin-top: 24px; }
+      .benefits-nav button { padding: 8px 18px; font-size: 0.75rem; }
+      .benefits-dots span { width: 10px; height: 10px; }
+      .benefits-header .section-title { font-size: 1.8rem; }
+      .benefits-header .benefits-subtitle { font-size: 0.9rem; }
+    }
+    @media (max-width: 480px) {
+      .benefits-premium-card { padding: 18px 12px; border-radius: 24px; }
+      .benefits-left h3 { font-size: 1.2rem; }
+      .benefit-points {
+        grid-template-columns: 1fr 1fr;
+        gap: 3px 8px;
+      }
+      .benefit-point { 
+        font-size: 0.68rem; 
+        gap: 6px;
+        padding: 2px 2px 2px 0;
+      }
+      .benefit-point .point-icon { 
+        width: 20px; 
+        height: 20px; 
+        min-width: 20px; 
+        font-size: 0.6rem;
+      }
+      .benefits-right .product-image-wrapper { max-width: 130px; }
+      .benefits-right { min-height: 120px; }
+      .benefits-nav button { padding: 6px 14px; font-size: 0.65rem; min-width: 70px; }
+      .benefits-dots span { width: 8px; height: 8px; }
+      .benefits-header .section-title { font-size: 1.5rem; }
+      .benefits-header .benefits-subtitle { font-size: 0.8rem; }
+    }
+
+    .export-slider-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 30px auto 0;
+      overflow: hidden;
+      border-radius: 40px;
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.04);
+    }
+    .export-slider {
+      display: flex;
+      transition: transform 0.8s cubic-bezier(0.23,1,0.32,1);
+      will-change: transform;
+    }
+    .export-slide {
+      flex: 0 0 100%;
+      min-height: 300px;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255,255,255,0.2);
+      border-radius: 40px;
+    }
+    .export-slide .slide-icon {
+      display: block;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+    .export-slide .slide-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: none;
+    }
+    .export-slide h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #2B2B2B;
+      margin-bottom: 8px;
+    }
+    .export-slide p {
+      font-size: 1.1rem;
+      opacity: 0.7;
+      max-width: 450px;
+      line-height: 1.6;
+    }
+    .export-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+    .export-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .export-dots span.active {
+      background: #CE771E;
+      transform: scale(1.2);
+    }
+
+    .export-section {
+      background: #E4D6BD;
+      border-radius: 60px;
+      padding: 60px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .export-section::before {
+      content: ''; position: absolute; top: -50%; right: -20%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(206,119,30,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .export-section { 
+        border-radius: 40px; 
+        padding: 30px 16px;
+        width: 100%;
+        margin: 0;
+      }
+      .export-slide { 
+        min-height: 220px; 
+        padding: 20px 16px; 
+      }
+      .export-slide h3 { font-size: 1.2rem; }
+      .export-slide p { font-size: 0.9rem; }
+      .export-slide .slide-icon { width: 45px; height: 45px; }
+      #export.section { padding: 40px 0; }
+      #export .container { padding: 0 12px; }
+      .export-slider-wrapper { border-radius: 30px; margin: 20px auto 0; }
+      .export-dots { margin-top: 18px; }
+      #export .section-title { text-align: left; }
+    }
+    @media (min-width: 769px) {
+      #export.section { padding-top: 40px; }
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(8px);
+      border-radius: 40px; padding: 30px 24px;
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+      transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+    }
+    .testimonial-card:hover { 
+      transform: translateY(-6px) scale(1.02); 
+      box-shadow: 0 20px 40px rgba(206,119,30,0.08);
+      border-color: rgba(206,119,30,0.2);
+    }
+    .testimonial-card strong { display: block; margin-top: 12px; color: #CE771E; font-weight: 700; }
+    @media (max-width: 768px) { 
+      .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) { 
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+    .inquiry-whatsapp {
+      text-align: center; padding: 50px 20px;
+      background: #fff; border-radius: 60px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.02);
+      border: 1px solid rgba(206,119,30,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .inquiry-whatsapp .btn-premium { font-size: 1.2rem; padding: 18px 48px; }
+
+    .contact-info {
+      display: flex; gap: 40px; flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .contact-info a { color: #CE771E; font-weight: 600; transition: 0.3s; }
+    .contact-info a:hover { color: #a85f16; }
+    .map-container {
+      border-radius: 40px; overflow: hidden;
+      height: 240px; background: #E8DCC5;
+      margin-top: 20px;
+      border: 1px solid rgba(206,119,30,0.05);
+    }
+    .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+    .footer {
+      background: #2B2B2B; color: #F5F1E8;
+      padding: 40px 24px 24px;
+      border-radius: 40px 40px 0 0;
+      margin-top: 40px;
+    }
+    .footer-links {
+      display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: 24px;
+      align-items: center;
+    }
+    .footer-social a {
+      color: #fff; 
+      opacity: 0.7; 
+      margin: 0 12px;
+      font-size: 1.6rem; 
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .footer-social a:hover { 
+      opacity: 1; 
+      color: #CE771E; 
+      transform: translateY(-3px) scale(1.1); 
+    }
+    .footer-social a i {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      line-height: 1;
+    }
+    .footer img { height: 32px; filter: brightness(0) invert(1); }
+
+    .text-center { text-align: center; }
+    .mt-20 { margin-top: 20px; }
+    .mb-20 { margin-bottom: 20px; }
+    .section-pad { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="logo">
+    <a href="#home"><img src="images/logo.png" alt="Desi Protein - Premium Sattu Export" /></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#benefits">Why Sattu?</a></li>
+    <li><a href="#export">Export</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#inquiry" class="nav-cta">Export Inquiry</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="sidebar" id="sidebar">
+  <a href="#home" onclick="closeSidebar()">Home</a>
+  <a href="#about" onclick="closeSidebar()">About</a>
+  <a href="#products" onclick="closeSidebar()">Products</a>
+  <a href="#benefits" onclick="closeSidebar()">Why Sattu?</a>
+  <a href="#export" onclick="closeSidebar()">Export</a>
+  <a href="#testimonials" onclick="closeSidebar()">Testimonials</a>
+  <a href="#contact" onclick="closeSidebar()">Contact</a>
+  <a href="#inquiry" class="nav-cta-mobile" onclick="closeSidebar()">Export Inquiry</a>
+</div>
+
+<!-- HERO -->
+<section class="hero section-pad" id="home">
+  <div class="container hero-grid">
+    <div class="hero-visual">
+      <div class="hero-mockup" id="heroImage"></div>
+    </div>
+    <div class="hero-content">
+      <h1>
+        <span class="line1" id="heroLine1">DESI PROTEIN.</span>
+        <span class="line2" id="heroLine2">MODERN ENERGY.</span>
+      </h1>
+      <p id="heroDesc">Traditional Indian nutrition reimagined for modern lifestyles.</p>
+      <div class="hero-buttons" id="heroButtons">
+        <a href="#products" class="btn-premium" id="heroBtn1">Explore Products</a>
+        <a href="https://wa.me/919769443373?text=Hi%2C%20I'm%20interested%20in%20export%20inquiry" target="_blank" class="btn-premium btn-outline" id="heroBtn2">Get Export Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section section-pad" id="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><h3 class="counter" data-target="100">0</h3><p>% Natural</p></div>
+    <div class="trust-item"><h3 class="counter" data-target="20">0</h3><p>g High Protein</p></div>
+    <div class="trust-item"><h3 class="counter" data-target="50">0</h3><p>Export Ready</p></div>
+    <div class="trust-item"><h3 class="counter" data-target="100">0</h3><p>Private Label</p></div>
+  </div>
+</section>
+
+<!-- ABOUT – text left, image right -->
+<section class="section section-pad" id="about">
+  <div class="container about-layout">
+    <div id="aboutText">
+      <h2 class="section-title">Rooted In Tradition.<br />Built For Performance.</h2>
+      <p class="section-sub" style="font-size:1.1rem; opacity:0.7; margin-top:16px;">Sattu has been the hidden gem of Indian nutrition for centuries. We bring it to the world with modern craft and premium quality.</p>
+      <div style="margin-top:30px;"><a href="#products" class="btn-premium">Discover our range</a></div>
+    </div>
+    <div class="about-image" id="aboutImage"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section section-pad" id="products">
+  <div class="container product-section-wrapper">
+    <h2 class="section-title">Premium <span style="color:#CE771E;">Sattu</span> Collection</h2>
+    <button class="scroll-btn scroll-btn-left" id="scrollLeft"><i class="fas fa-chevron-left"></i></button>
+    <button class="scroll-btn scroll-btn-right" id="scrollRight"><i class="fas fa-chevron-right"></i></button>
+    <div class="product-scroll-wrapper" id="productScroll">
+      <div class="product-card"><div class="card-image" style="background-image: url('products/1.png');"></div><h4>Sattu Shake</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/2.png');"></div><h4>Sattu Powder</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/3.png');"></div><h4>Protein+ Shake</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/4.png');"></div><h4>OEM Sattu</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/5.png');"></div><h4>Jau Sattu</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/6.png');"></div><h4>Instant Sattu</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/7.png');"></div><h4>Organic Sattu</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/8.png');"></div><h4>Bulk Sattu</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/9.png');"></div><h4>Sattu Bar</h4></div>
+      <div class="product-card"><div class="card-image" style="background-image: url('products/10.png');"></div><h4>Desi Sattu</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REDESIGNED WHY SATTU? ========== -->
+<section class="section section-pad" id="benefits">
+  <div class="container">
+    <!-- Left-aligned heading + subtitle -->
+    <div class="benefits-header">
+      <h2 class="section-title" id="benefitsHeading">Why Sattu?</h2>
+    </div>
+
+    <!-- Premium Card - Reduced height -->
+    <div class="benefits-premium-card" id="benefitsPremiumCard">
+      <!-- Left Column -->
+      <div class="benefits-left">
+        <span class="benefit-tag">✦ Premium Nutrition</span>
+        <h3>Fuel Your Day<br />The Natural Way</h3>
+        <p class="benefit-desc">Sattu is a complete plant-based protein source that keeps you energized, focused, and satisfied.</p>
+        <div class="benefit-points">
+          <div class="benefit-point"><span class="point-icon"><i class="fas fa-leaf"></i></span> 100% Natural</div>
+          <div class="benefit-point"><span class="point-icon"><i class="fas fa-bolt"></i></span> Sustained Energy</div>
+          <div class="benefit-point"><span class="point-icon"><i class="fas fa-dumbbell"></i></span> 20g+ Protein</div>
+          <div class="benefit-point"><span class="point-icon"><i class="fas fa-apple-alt"></i></span> Rich in Fiber</div>
+          <div class="benefit-point"><span class="point-icon"><i class="fas fa-heart"></i></span> Gut Health</div>
+          <div class="benefit-point"><span class="point-icon"><i class="fas fa-globe-asia"></i></span> Indian Superfood</div>
+        </div>
+      </div>
+
+      <!-- Right Column - Image -->
+      <div class="benefits-right">
+        <div class="product-image-wrapper" id="benefitHeroImage"></div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="benefits-nav">
+      <button id="benefitPrev" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+      <div class="benefits-dots" id="benefitDots"></div>
+      <button id="benefitNext">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- EXPORT -->
+<section class="section section-pad" id="export">
+  <div class="container">
+    <div class="export-section">
+      <h2 class="section-title" style="color:#2B2B2B;">Exporting Indian Nutrition <br />Worldwide</h2>
+      <div class="export-slider-wrapper">
+        <div class="export-slider" id="exportSlider">
+          <div class="export-slide"><span class="slide-icon"><img src="icons/global.png" alt="Global Shipping" /></span><h3>Global Shipping</h3><p>We ship to over 50 countries worldwide with reliable logistics.</p></div>
+          <div class="export-slide"><span class="slide-icon"><img src="icons/bulk.png" alt="Bulk Orders" /></span><h3>Bulk Orders</h3><p>Competitive pricing for wholesale and bulk export orders.</p></div>
+          <div class="export-slide"><span class="slide-icon"><img src="icons/oem.png" alt="OEM Manufacturing" /></span><h3>OEM Manufacturing</h3><p>Custom formulations and packaging for your brand.</p></div>
+          <div class="export-slide"><span class="slide-icon"><img src="icons/private-label.png" alt="Private Label" /></span><h3>Private Label Services</h3><p>Complete private labeling with your logo and design.</p></div>
+          <div class="export-slide"><span class="slide-icon"><img src="icons/documentation.png" alt="Export Documentation" /></span><h3>Export Documentation</h3><p>Full export documentation and compliance support.</p></div>
+        </div>
+      </div>
+      <div class="export-dots" id="exportDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-pad" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">“The cleanest protein source we’ve found. Our customers love it.”<br /><strong>— CEO, NutriGlobal</strong></div>
+      <div class="testimonial-card">“Private labeling made seamless. Premium packaging and taste.”<br /><strong>— Brand Partner, UK</strong></div>
+      <div class="testimonial-card">“Sattu Shake is our bestseller in the Middle East.”<br /><strong>— Distribution Lead</strong></div>
+      <div class="testimonial-card">“Incredible quality and consistent supply. Highly recommend.”<br /><strong>— Founder, PureFoods</strong></div>
+      <div class="testimonial-card">“The best plant-based protein we have ever sourced.”<br /><strong>— Head of Supply, EU</strong></div>
+      <div class="testimonial-card">“Our clients keep coming back for the authentic taste.”<br /><strong>— Export Manager, Asia</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY - CENTERED -->
+<section class="section section-pad" id="inquiry">
+  <div class="container inquiry-whatsapp">
+    <h2 class="section-title" style="font-size:2.4rem; text-align:center;">Export Inquiry</h2>
+    <p style="opacity:0.6; margin: 16px 0 32px; text-align:center;">Click below to chat with our export team on WhatsApp</p>
+    <a href="https://wa.me/919769443373?text=Hi%2C%20I'm%20interested%20in%20export%20inquiry" target="_blank" class="btn-premium" style="font-size:1.2rem; padding:18px 48px;">
+      <i class="fab fa-whatsapp" style="margin-right:12px;"></i> Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-pad" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-info">
+      <div><strong>📱 WhatsApp</strong><br /><a href="https://wa.me/919769443373" target="_blank">+91 9769443373</a></div>
+      <div><strong>✉️ Email</strong><br /><a href="mailto:shaobaid76@gmail.com">shaobaid76@gmail.com</a></div>
+      <div><strong>📍 Address</strong><br />Mumbai, India</div>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7544.427973458639!2d72.8857461!3d19.0722725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzIwLjIiTiA3MsKwNTMnMDguNyJF!5e0!3m2!1sen!2sin!4v1650000000000" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <div><a href="#home"><img src="images/logo.png" alt="Desi Protein" /></a></div>
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#benefits">Why Sattu?</a><a href="#export">Export</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://wa.me/919769443373" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/official_mr_obaid" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/obaidullah-shaikh/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:shaobaid76@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <div style="margin-top:30px; opacity:0.3; font-size:0.8rem; text-align:center;">© 2026 Desi Protein · Premium Sattu Export</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  (function() {
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('keydown', function(e) {
+      const ctrl = e.ctrlKey || e.metaKey;
+      const shift = e.shiftKey;
+      if (ctrl && (e.key === 'u' || e.key === 's')) {
+        e.preventDefault();
+        return false;
+      }
+      if (ctrl && shift && (e.key === 'i' || e.key === 'I')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    const cspMeta = document.createElement('meta');
+    cspMeta.httpEquiv = 'Content-Security-Policy';
+    cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://www.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; frame-src https://www.google.com;";
+    document.head.appendChild(cspMeta);
+    if (window.top !== window.self) {
+      window.top.location = window.self.location;
+    }
+    const referrerMeta = document.createElement('meta');
+    referrerMeta.name = 'referrer';
+    referrerMeta.content = 'no-referrer-when-downgrade';
+    document.head.appendChild(referrerMeta);
+  })();
+
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+  }
+
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // --- FIXED HERO ANIMATIONS (buttons always visible) ---
+    gsap.set("#heroBtn1, #heroBtn2", { opacity: 1, y: 0, rotation: 0 });
+    
+    const heroTL = gsap.timeline({ defaults: { ease: "power3.out" } });
+    
+    heroTL.from("#heroImage", {
+      duration: 1.4,
+      scale: 0.8,
+      opacity: 0,
+      rotation: 8,
+      ease: "back.out(1.7)"
+    }, 0);
+    
+    heroTL.from("#heroLine1", {
+      duration: 1,
+      y: 70,
+      opacity: 0,
+      skewY: 5
+    }, 0.2);
+    heroTL.from("#heroLine2", {
+      duration: 1,
+      y: 70,
+      opacity: 0,
+      skewY: 5
+    }, 0.35);
+    
+    heroTL.from("#heroDesc", {
+      duration: 0.9,
+      y: 40,
+      opacity: 0,
+      scale: 0.9
+    }, 0.5);
+    
+    heroTL.from("#heroBtn1", {
+      duration: 0.5,
+      scale: 0.9,
+      opacity: 0.95,
+      ease: "back.out(1.7)"
+    }, 0.7);
+    heroTL.from("#heroBtn2", {
+      duration: 0.5,
+      scale: 0.9,
+      opacity: 0.95,
+      ease: "back.out(1.7)"
+    }, 0.85);
+
+    gsap.to("#heroImage", {
+      scrollTrigger: {
+        trigger: "#home",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 0.5
+      },
+      y: -40,
+      scale: 1.03,
+      rotation: 1.5,
+      ease: "none"
+    });
+
+    // ABOUT SECTION
+    gsap.from("#aboutText", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      duration: 1.2,
+      x: -80,
+      opacity: 0,
+      ease: "power4.out"
+    });
+
+    gsap.from("#aboutImage", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      duration: 1.2,
+      x: 80,
+      opacity: 0,
+      rotation: 6,
+      ease: "back.out(1.7)"
+    });
+
+    // COUNTERS
+    gsap.utils.toArray(".trust-item").forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: "#trust",
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        },
+        duration: 0.8,
+        y: 40,
+        opacity: 0,
+        scale: 0.8,
+        delay: i * 0.1,
+        ease: "back.out(1.2)"
+      });
+    });
+
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          let current = 0;
+          const increment = target / 50;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              el.textContent = target + (target === 100 ? '%' : 'g');
+              clearInterval(timer);
+            } else {
+              el.textContent = Math.floor(current);
+            }
+          }, 25);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+
+    // PRODUCT CARDS
+    gsap.utils.toArray(".product-card").forEach((card, i) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: "#products",
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        duration: 0.9,
+        x: 80,
+        opacity: 0,
+        rotation: 3,
+        delay: i * 0.06,
+        ease: "power3.out"
+      });
+    });
+
+    // ========== REDESIGNED BENEFITS SLIDER (6 slides) ==========
+    const benefitsData = [
+      {
+        tag: '✦ Premium Nutrition',
+        title: 'Fuel Your Day<br />The Natural Way',
+        desc: 'Sattu is a complete plant-based protein source that keeps you energized, focused, and satisfied.',
+        points: [
+          '100% Natural',
+          'Sustained Energy',
+          '20g+ Protein',
+          'Rich in Fiber',
+          'Gut Health',
+          'Indian Superfood'
+        ],
+        icon: 'fa-leaf'
+      },
+      {
+        tag: '✦ Energy Booster',
+        title: 'Stay Active<br />All Day Long',
+        desc: 'Sattu provides slow-release carbohydrates that give you steady energy without the jitters.',
+        points: [
+          'Slow-Release Carbs',
+          'No Artificial Caffeine',
+          'Perfect for Athletes',
+          'Pre-Workout Fuel',
+          'Post-Workout Recovery',
+          'All-Day Vitality'
+        ],
+        icon: 'fa-bolt'
+      },
+      {
+        tag: '✦ Gut Health',
+        title: 'Happy Gut,<br />Happy Life',
+        desc: 'Rich in dietary fiber, Sattu supports healthy digestion and promotes gut microbiome balance.',
+        points: [
+          'High Dietary Fiber',
+          'Supports Digestion',
+          'Prevents Bloating',
+          'Gut Microbiome Support',
+          'Natural Detoxifier',
+          'Improves Metabolism'
+        ],
+        icon: 'fa-apple-alt'
+      },
+      {
+        tag: '✦ Plant-Powered',
+        title: 'Pure Plant<br />Protein Power',
+        desc: 'Get all the essential amino acids from this ancient plant-based protein source.',
+        points: [
+          'Complete Amino Acids',
+          '100% Plant-Based',
+          'Vegan Friendly',
+          'Dairy-Free',
+          'Gluten-Free Option',
+          'Sustainable Nutrition'
+        ],
+        icon: 'fa-seedling'
+      },
+      {
+        tag: '✦ Ancient Wisdom',
+        title: 'Rooted In<br />Indian Tradition',
+        desc: 'Sattu has been nourishing generations with its simple, powerful nutritional benefits.',
+        points: [
+          '5000+ Year Old',
+          'Trusted by Generations',
+          'Ayurvedic Superfood',
+          'Natural & Pure',
+          'Minimally Processed',
+          'Time-Tested Nutrition'
+        ],
+        icon: 'fa-globe-asia'
+      },
+      {
+        tag: '✦ Modern Lifestyle',
+        title: 'Perfect For<br />Busy Lives',
+        desc: 'Quick to prepare, easy to digest, and packed with everything you need to thrive.',
+        points: [
+          'Ready in 2 Minutes',
+          'Portable Nutrition',
+          'No Cooking Required',
+          'Fits Any Diet',
+          'Great Taste',
+          'Affordable Superfood'
+        ],
+        icon: 'fa-clock'
+      }
+    ];
+
+    const benefitsSlider = document.getElementById('benefitsSlider');
+    const benefitDots = document.getElementById('benefitDots');
+    const benefitPrev = document.getElementById('benefitPrev');
+    const benefitNext = document.getElementById('benefitNext');
+    const premiumCard = document.getElementById('benefitsPremiumCard');
+    let benefitIndex = 0;
+    const totalBenefits = benefitsData.length;
+
+    // Build dots
+    benefitsData.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToBenefit(i));
+      benefitDots.appendChild(dot);
+    });
+
+    function updateCard(index) {
+      const data = benefitsData[index];
+      const leftCol = premiumCard.querySelector('.benefits-left');
+      const rightImg = premiumCard.querySelector('.product-image-wrapper');
+      
+      // Update left content with animation
+      const tag = leftCol.querySelector('.benefit-tag');
+      const title = leftCol.querySelector('h3');
+      const desc = leftCol.querySelector('.benefit-desc');
+      const pointsContainer = leftCol.querySelector('.benefit-points');
+      
+      // Animate out
+      gsap.to(leftCol.children, {
+        opacity: 0,
+        y: 15,
+        duration: 0.25,
+        stagger: 0.04,
+        ease: 'power2.out',
+        onComplete: () => {
+          // Update content
+          tag.textContent = data.tag;
+          title.innerHTML = data.title;
+          desc.textContent = data.desc;
+          pointsContainer.innerHTML = data.points.map(p => 
+            `<div class="benefit-point"><span class="point-icon"><i class="fas ${data.icon}"></i></span> ${p}</div>`
+          ).join('');
+          
+          // Animate in
+          gsap.fromTo(leftCol.children, 
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.4, stagger: 0.06, ease: 'back.out(1.2)' }
+          );
+        }
+      });
+      
+      // Update dots
+      benefitDots.querySelectorAll('span').forEach((d, i) => {
+        d.classList.toggle('active', i === index);
+      });
+      benefitPrev.disabled = index === 0;
+      benefitNext.disabled = index === totalBenefits - 1;
+    }
+
+    function goToBenefit(index) {
+      benefitIndex = index;
+      updateCard(index);
+    }
+
+    benefitPrev.addEventListener('click', () => { if (benefitIndex > 0) goToBenefit(benefitIndex - 1); });
+    benefitNext.addEventListener('click', () => { if (benefitIndex < totalBenefits - 1) goToBenefit(benefitIndex + 1); });
+
+    // Initial load animation for the card
+    gsap.from(premiumCard, {
+      scrollTrigger: {
+        trigger: '#benefits',
+        start: 'top 70%',
+        toggleActions: 'play none none reverse'
+      },
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      scale: 0.97,
+      ease: 'power4.out'
+    });
+
+    // ========== EXPORT AUTO SLIDER ==========
+    const exportSlider = document.getElementById('exportSlider');
+    const exportDots = document.getElementById('exportDots');
+    const exportSlides = exportSlider.querySelectorAll('.export-slide');
+    let exportIndex = 0;
+    const totalExports = exportSlides.length;
+    let exportInterval;
+
+    exportSlides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToExport(i));
+      exportDots.appendChild(dot);
+    });
+
+    function goToExport(index) {
+      exportIndex = index;
+      exportSlider.style.transform = `translateX(-${index * 100}%)`;
+      exportDots.querySelectorAll('span').forEach((d, i) => {
+        d.classList.toggle('active', i === index);
+      });
+      const currentSlide = exportSlides[index];
+      const dir = index % 2 === 0 ? -60 : 60;
+      gsap.fromTo(currentSlide.querySelectorAll('h3, p, .slide-icon'),
+        { opacity: 0, x: dir, scale: 0.9 },
+        { opacity: 1, x: 0, scale: 1, duration: 0.7, stagger: 0.1, ease: "back.out(1.4)" }
+      );
+    }
+
+    function nextExport() {
+      goToExport((exportIndex + 1) % totalExports);
+    }
+
+    function startExportAuto() {
+      if (exportInterval) clearInterval(exportInterval);
+      exportInterval = setInterval(nextExport, 3000);
+    }
+
+    const exportWrapper = document.querySelector('.export-slider-wrapper');
+    exportWrapper.addEventListener('mouseenter', () => { if (exportInterval) clearInterval(exportInterval); });
+    exportWrapper.addEventListener('mouseleave', startExportAuto);
+
+    setTimeout(() => {
+      const firstSlide = exportSlides[0];
+      gsap.fromTo(firstSlide.querySelectorAll('h3, p, .slide-icon'),
+        { opacity: 0, x: -60, scale: 0.9 },
+        { opacity: 1, x: 0, scale: 1, duration: 0.7, stagger: 0.1, ease: "back.out(1.4)" }
+      );
+    }, 400);
+
+    startExportAuto();
+
+    // TESTIMONIALS
+    gsap.utils.toArray(".testimonial-card").forEach((card, i) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: "#testimonials",
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        duration: 0.7,
+        y: 40,
+        opacity: 0,
+        scale: 0.95,
+        delay: i * 0.08,
+        ease: "power3.out"
+      });
+    });
+
+    // SECTION TITLES
+    gsap.utils.toArray(".section-title").forEach(title => {
+      gsap.from(title, {
+        scrollTrigger: {
+          trigger: title,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        },
+        duration: 1,
+        y: 40,
+        opacity: 0,
+        skewX: 3,
+        ease: "power3.out"
+      });
+    });
+
+    // PRODUCT SCROLL
+    const wrapper = document.getElementById('productScroll');
+    const leftBtn = document.getElementById('scrollLeft');
+    const rightBtn = document.getElementById('scrollRight');
+
+    if (wrapper && leftBtn && rightBtn) {
+      const scrollAmount = 410;
+      leftBtn.addEventListener('click', () => { wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); });
+      rightBtn.addEventListener('click', () => { wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' }); });
+
+      function checkButtons() {
+        if (window.innerWidth < 769) {
+          leftBtn.style.display = 'none';
+          rightBtn.style.display = 'none';
+        } else {
+          leftBtn.style.display = 'flex';
+          rightBtn.style.display = 'flex';
+          if (wrapper.scrollWidth <= wrapper.clientWidth) {
+            leftBtn.style.display = 'none';
+            rightBtn.style.display = 'none';
+          }
+        }
+      }
+      checkButtons();
+      window.addEventListener('resize', checkButtons);
+
+      let isDown = false, startX, scrollLeft;
+      wrapper.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - wrapper.offsetLeft;
+        scrollLeft = wrapper.scrollLeft;
+        wrapper.style.cursor = 'grabbing';
+      });
+      wrapper.addEventListener('mouseleave', () => { isDown = false; wrapper.style.cursor = 'grab'; });
+      wrapper.addEventListener('mouseup', () => { isDown = false; wrapper.style.cursor = 'grab'; });
+      wrapper.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - wrapper.offsetLeft;
+        const walk = (x - startX) * 2;
+        wrapper.scrollLeft = scrollLeft - walk;
+      });
+    }
+
+    ScrollTrigger.refresh();
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#") return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('SW registered:', reg))
+        .catch(err => console.log('SW registration failed:', err));
+    });
+  }
+</script>
+</body>
+</html>
