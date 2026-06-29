@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
   <title>Desi Protein · Premium Sattu Shake </title>
   <meta name="description" content="Desi Protein offers premium Sattu shakes & powders. 100% natural, high-protein traditional Indian nutrition for modern lifestyles. Export & private label available." />
-  <link rel="canonical" href="https://desiprotein.com/" />
+  <link rel="canonical" href="https://officialsattu.vercel.app/" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#CE771E" />
@@ -13,8 +13,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta property="og:title" content="Desi Protein · Premium Sattu Shake " />
   <meta property="og:description" content="Traditional Indian nutrition reimagined. 100% natural Sattu shakes, powders & private label export." />
-  <meta property="og:image" content="https://desiprotein.com/images/og-image.jpg" />
-  <meta property="og:url" content="https://desiprotein.com/" />
+  <meta property="og:image" content="https://officialsattu.vercel.app/images/og-image.jpg" />
+  <meta property="og:url" content="https://officialsattu.vercel.app/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -261,11 +261,19 @@
       background-position: center;
       box-shadow: none;
       transition: transform 0.6s cubic-bezier(0.23,1,0.32,1);
+      transform-style: preserve-3d;
+      perspective: 800px;
     }
     .about-image:hover { transform: scale(1.02) rotate(-1deg); }
     @media (max-width: 768px) { 
       .about-layout { grid-template-columns: 1fr; }
       .about-image { height: 350px; }
+    }
+
+    /* 3D Tilt on About Image */
+    .about-image-tilt {
+      transition: transform 0.1s ease;
+      will-change: transform;
     }
 
     .product-section-wrapper {
@@ -388,7 +396,10 @@
         padding: 20px 0 40px;
       }
       .hero { padding-top: 100px; }
-      #about.section { padding-top: 40px; }
+      #about.section { 
+        padding-top: 20px; 
+        padding-bottom: 60px;
+      }
       #products.section { padding-top: 40px; }
       #benefits.section { padding-top: 40px; }
       #export.section { padding-top: 40px; }
@@ -403,7 +414,13 @@
       .product-card { flex: 0 0 280px; min-height: 400px; }
       .scroll-btn { display: none !important; }
       .product-scroll-wrapper { overflow-x: auto; flex-wrap: nowrap; gap: 16px; }
-      .product-section-wrapper { padding: 0; }
+      .product-section-wrapper { 
+        padding: 0 8px; 
+      }
+      .product-section-wrapper .section-title {
+        padding-left: 8px;
+        margin-bottom: 8px;
+      }
       .hero { padding-top: 140px; }
       #about.section { 
         padding-top: 40px; 
@@ -1016,9 +1033,9 @@
     <div id="aboutText">
       <h2 class="section-title">Rooted In Tradition.<br />Built For Performance.</h2>
       <p class="section-sub" style="font-size:1.1rem; opacity:0.7; margin-top:16px;">Sattu has been the hidden gem of Indian nutrition for centuries. We bring it to the world with modern craft and premium quality.</p>
-      <div style="margin-top:30px;"><a href="#products" class="btn-premium">Discover our range</a></div>
+      <div style="margin-top:30px;"><a href="#products" class="btn-premium">Discover our product</a></div>
     </div>
-    <div class="about-image" id="aboutImage"></div>
+    <div class="about-image about-image-tilt" id="aboutImage"></div>
   </div>
 </section>
 
@@ -1206,6 +1223,35 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     gsap.registerPlugin(ScrollTrigger);
+
+    // --- 3D TILT ON ABOUT IMAGE (mouse + touch) ---
+    const aboutImage = document.getElementById('aboutImage');
+    if (aboutImage) {
+      const tiltEffect = (e) => {
+        const rect = aboutImage.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const rotateY = x * 12;
+        const rotateX = -y * 12;
+        aboutImage.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      };
+      const resetTilt = () => {
+        aboutImage.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
+      };
+      aboutImage.addEventListener('mousemove', tiltEffect);
+      aboutImage.addEventListener('mouseleave', resetTilt);
+      // Touch support for mobile
+      aboutImage.addEventListener('touchmove', (e) => {
+        const touch = e.touches[0];
+        const rect = aboutImage.getBoundingClientRect();
+        const x = (touch.clientX - rect.left) / rect.width - 0.5;
+        const y = (touch.clientY - rect.top) / rect.height - 0.5;
+        const rotateY = x * 12;
+        const rotateX = -y * 12;
+        aboutImage.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      }, { passive: true });
+      aboutImage.addEventListener('touchend', resetTilt);
+    }
 
     // --- FIXED HERO ANIMATIONS (buttons always visible) ---
     gsap.set("#heroBtn1, #heroBtn2", { opacity: 1, y: 0, rotation: 0 });
